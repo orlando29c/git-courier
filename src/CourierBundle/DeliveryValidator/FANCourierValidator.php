@@ -4,6 +4,7 @@ namespace CourierBundle\DeliveryValidator;
 
 use CommonBundle\Entity\Product\Product;
 use CourierBundle\DeliveryValidator\Exception\DeliveryNotSupported;
+use CourierBundle\DeliveryValidator\Exception\ProductException;
 use DeliveryBundle\Entity\Delivery;
 
 class FANCourierValidator
@@ -20,7 +21,7 @@ class FANCourierValidator
 
         foreach ($delivery->products as $product) {
             if ($product->type !== Product::DRY) {
-                throw new DeliveryNotSupported();
+                throw new ProductException();
             }
 
             if ($product->weight > self::MAX_WEIGHT) {
