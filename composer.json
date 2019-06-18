@@ -1,0 +1,10 @@
+{
+    "name": "mihai-stancu/git-courier",
+    "authors": [
+        {
+            "name": "Mihai Stancu",
+            "email": "mihai.stancu@emag.ro"
+        }
+    ],
+    "require": {}
+}
